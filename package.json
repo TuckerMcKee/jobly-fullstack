@@ -1,0 +1,32 @@
+  {
+    "name": "jobly-fullstack",
+    "version": "2.0.0",
+    "engines": {
+      "node": "22.x",
+      "npm": "10.x"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "cors": "^2.8.5",
+        "morgan": "^1.10.0",
+        "pg": "^8.6.0",
+        "jsonwebtoken": "^8.5.1",
+        "sequelize": "^6.6.5",
+        "dotenv": "^10.0.0",
+        "colors": "^1.4.0",
+        "jsonschema": "^1.4.1"
+      },
+    "scripts": {
+      
+      "postinstall": "npm install --prefix jobly-backend",
+  
+      
+      "heroku-postbuild": "npm install --prefix jobly-frontend && npm run build --prefix jobly-frontend && cp -r jobly-frontend/dist jobly-backend/public",
+  
+      
+      "start": "npm start --prefix jobly-backend"
+    }
+  }
+  
+  
+  
